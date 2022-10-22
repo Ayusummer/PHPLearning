@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <title>
+            Vulnerability: File Upload :: Damn Vulnerable Web Application (DVWA)
+            v1.10 *Development*
+        </title>
+
+        <link rel="stylesheet" type="text/css" href="../../dvwa/css/main.css" />
+
+        <link rel="icon" type="\image/ico" href="../../favicon.ico" />
+
+        <script type="text/javascript" src="../../dvwa/js/dvwaPage.js"></script>
+    </head>
+
+    <body class="home">
+        <div id="container">
+
+            <div id="main_body">
+                <div class="body_padded">
+                    <h1>Vulnerability: File Upload</h1>
+
+                    <div class="vulnerable_code_area">
+                        <form
+                            enctype="multipart/form-data"
+                            action="#"
+                            method="POST"
+                        >
+                            <input
+                                type="hidden"
+                                name="MAX_FILE_SIZE"
+                                value="100000"
+                            />
+                            Choose an image to upload:<br /><br />
+                            <input name="uploaded" type="file" /><br />
+                            <br />
+                            <input type="submit" name="Upload" value="Upload" />
+                        </form>
+                        <pre>
+../../hackable/uploads/test.jpg succesfully uploaded!</pre
+                        >
+                    </div>
+
+                    <h2>More Information</h2>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload"
+                                target="_blank"
+                                >https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.acunetix.com/websitesecurity/upload-forms-threat/"
+                                target="_blank"
+                                >https://www.acunetix.com/websitesecurity/upload-forms-threat/</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <br /><br />
+            </div>
+
+        </div>
+    </body>
+</html>
